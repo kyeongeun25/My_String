@@ -1,0 +1,16 @@
+SpStart03 프로젝트
+
+1. jar 라이브러리를 현재 설치된 버전에서 Workspace에 설정된 버전으로 변경
+2. pom.xml에 spring framework의 버전을 현재 설치된 버전에서 5.1.1로 변경
+3. web.xml에 url-pattern을 변경하여 *.biz에 반응하도록 변경
+4. 프로젝트를 시작했을때 404 오류가 나지 않도록 webapp 폴더의 index.html을 작성하고
+	내 홈페이지에 오신것을 환영합니다 라는 메시지가 나타 나도록 설정
+	
+5. com.biz.start03.controllers 패키지를 생성하고 
+6. HomeController.java를 *.controllers 패키지로 이동하고
+7. /WEB-INF/spring/appServlet/servlet-context.xml의 component-scan base-package를 변경하여
+	controllers 패키지만 scan 하도록 설정
+	
+8. 브라우저에서 /start03/hello.biz를 요청하면, hello.jsp 파일을 읽어 브라우저로 보내되
+9. 브라우저에 Hello 대한민국 이라고 표시하도록 작성
+

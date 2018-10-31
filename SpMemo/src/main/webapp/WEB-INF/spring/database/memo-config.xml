@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+	PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+	
+	<configuration>
+  	<settings>
+  		<setting name="mapUnderscoreToCamelCase" value="true"/>
+  	</settings>
+  	
+  	<!-- MemoVO 라고 쓰면 com.biz.spmemo01.vo.MemoVO 이렇게 불러라  -->
+  	<typeAliases>
+  		<typeAlias type="com.biz.spmemo01.vo.MemoVO" alias="MemoVO"/>
+  		<typeAlias type="com.biz.spmemo01.vo.MemoInfoVO" alias="MemoInfoVO"/>
+		<typeAlias type="com.biz.spmemo01.vo.MemberVO" alias="MemberVO" />  		
+  	</typeAliases>
+
+
+
+
+
+  </configuration>

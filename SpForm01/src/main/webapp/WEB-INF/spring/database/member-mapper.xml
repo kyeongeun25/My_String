@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.biz.form01.dao.MemberDAO">
+
+	<!-- DAO에 있는 insert method와 이름 같음 -->
+	<insert id="insert" parameterType="MemberVO">
+		INSERT INTO tbl_member (username, telno, addr, email)
+		VALUES (#{username}, #{telno}, #{addr}, #{email})
+	</insert>
+
+	<select id="selectOne" resultType="MemberVO">
+		select * from tbl_member where id = #{id}
+	</select>
+	
+	<select id="selectAll" resultType="MemberVO">
+		select * from tbl_member
+	</select>
+	
+	<update id="update" parameterType="MemberVO">
+		UPDATE tbl_member 
+		SET username = #{username},
+			telno = #{telno},
+			addr = #{addr},
+			email = #{email}
+		WHERE id = #{id}	
+	</update>
+	
+	<delete id="delete" >
+		DELETE FROM tbl_member WHERE id = #{id}
+	</delete>
+	
+</mapper>

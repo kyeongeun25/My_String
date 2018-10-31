@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="com.biz.spmemo01.dao.MemoDAO">
+
+
+
+	<!-- as 뒤를 vo에 있는 변수명과 동일하게 해줘야 매치가 쉽다. -->
+	<!-- mybatis-context에서 *-mapper.xml로 코드를 수정해준다. -->
+	<select id="selectInfoAll" resultType="MemoInfoVO">
+		SELECT m.*, c.C_VALUE as cValue, f.F_VALUE as fValue FROM tbl_memo AS m
+		LEFT JOIN tbl_category AS c 
+			ON m.memoCat = c.C_KEY
+		LEFT JOIN tbl_flag AS f
+			ON m.flag = f.F_KEY		
+	</select>
+</mapper>

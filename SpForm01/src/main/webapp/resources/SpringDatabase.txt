@@ -1,0 +1,31 @@
+1. spring에서 3rd party Lib를 사용하기 위해서는
+http://mvnrepository.com/에서 정보를 조회하고
+조회된 정보에 따라 프로젝트의 pom.xml에 해당 정보를
+작성함으로써 모든 일이 완료된다.
+
+2. spring에서 Database에 연결하기 위해서는
+	가. JDBC를 이용하는 방법
+	나. mybatis를 이용하는 방법
+	다. Hibernate를 이용하는 방법
+	
+	이중에서 Hibernate를 이용하는 방법은 최근에 완성된 기술로
+	아직 실무에서 많이 사용하지 않는 관계로
+	여기서는 mybatis를 주로 사용할 예정이다.
+	
+3. mybatis 3rd party LIB를 연동 시켜야 하는데 
+	가. mybatis
+	나. mybatis-spring
+	다. spring-jdbc
+	를 연동하고
+	
+	mysql을 사용하려면
+		가. mysql-connection
+		
+	오라클을 사용하려면
+		가. ojdbc
+		를 연동한다.
+		
+	그리고 선택사항으로 JDBC의 transaction 성능 향상을 위해
+	commons-dbcp를 연동한다.
+		
+	
